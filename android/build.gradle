@@ -42,9 +42,7 @@ android {
     }
 
 
-    kotlinOptions {
-        jvmTarget = '17' // 与 Java 版本一致
-    }
+    kotlinOptions { jvmTarget = '1.8' }
 }
 
 dependencies {
