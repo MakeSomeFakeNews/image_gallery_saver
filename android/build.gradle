@@ -24,6 +24,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+
+
+
 android {
     compileSdkVersion 33
     namespace 'com.example.imagegallerysaver'
@@ -36,6 +39,15 @@ android {
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+     // 新增以下配置：统一 JVM 目标版本为 1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8' // 与 Java 版本一致
     }
 }
 
